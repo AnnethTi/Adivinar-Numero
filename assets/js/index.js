@@ -9,6 +9,7 @@ const showNumber = ( number ) => {
 }
 
 const findNumber = () =>{
+    resetIndex()
     while ( !isYourNumber(indexMedium) ){
         if( isYourNumberUnder(indexMedium) ){
             indexRigth = indexMedium - 1
@@ -34,4 +35,11 @@ const congratsFnc = ( number ) => {
 }
 
 //findNumber()
+
+
+function resetIndex (){
+    indexLeft = 1;
+    indexRigth = 100;
+    indexMedium = parseInt((indexLeft+indexRigth)/2);
+} 
 
