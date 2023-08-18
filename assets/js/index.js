@@ -1,6 +1,7 @@
 let indexLeft = 1;
 let indexRigth = 100;
 let indexMedium = parseInt((indexLeft+indexRigth)/2);
+let congrats = document.getElementById('congrats')
 
 const showNumber = ( number ) => {
     const showNumber = document.getElementById('showNumber')
@@ -16,7 +17,7 @@ const findNumber = () =>{
         }
         indexMedium = parseInt((indexLeft+indexRigth)/2);
     }
-    congrats(indexMedium)
+    congratsFnc(indexMedium)
 }
 const isYourNumber = (number) => {
     return confirm(`¿Tu número es ... ${number}?`)
@@ -27,10 +28,10 @@ const isYourNumberUnder = (number) => {
 }
 
 //showNumber(indexMedium)
-const congrats = ( number ) => {
-    let congrats = document.getElementById('congrats')
+const congratsFnc = ( number ) => {
     congrats.innerHTML = `Tu número es el ${number}, excelente decisión`
 
 }
 
-findNumber()
+//findNumber()
+
